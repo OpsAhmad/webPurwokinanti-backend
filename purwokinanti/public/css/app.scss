@@ -1,0 +1,216 @@
+/* import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap"); /* Work Sans */
+
+/* Variable */
+$primaryColor: #08afaf;
+$NavbarColor: linear-gradient(
+    90deg,
+    rgba(20, 142, 205, 1) 0%,
+    rgba(72, 166, 240, 1) 82%
+);
+$NavbarTransparantColor: #07181b00;
+$NavbarDarkerColor: rgb(17, 129, 185);
+$NavbarSweetColor: rgb(27, 149, 211);
+$bgFooter: #f3f3f3;
+$navHeight: 60px;
+
+body {
+    overflow-x: hidden;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: "Work Sans", sans-serif;
+}
+
+nav {
+    position: fixed;
+    z-index: 99;
+    height: $navHeight;
+    width: 100%;
+    background: $NavbarColor;
+    transition: all 0.3s;
+    .container-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 32px;
+    }
+    .logo {
+        color: #fff;
+        font-size: 24px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        font-weight: bold;
+    }
+    .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        transition: transform 0.4s;
+        a {
+            color: #fff;
+            margin: 0 5px;
+            text-decoration: none;
+            font-size: 18px;
+
+            li {
+                height: $navHeight;
+                display: flex;
+                align-items: center;
+                transition: 0.3s;
+                padding: 0 15px;
+                &:hover {
+                    background: $NavbarDarkerColor;
+                }
+            }
+            &.active {
+                background: $NavbarSweetColor;
+            }
+        }
+    }
+    .hamburger {
+        display: none;
+        // border: 1px solid #fff;
+        padding: 7px 7px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s;
+        div {
+            width: 20px;
+            height: 3px;
+            margin-top: 3px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+    }
+}
+/* Nav little */
+@media screen and (max-width: 768px) {
+    .nav {
+        .menu {
+            position: absolute;
+            background: $NavbarColor;
+            display: block;
+            width: 100%;
+            left: 0;
+            top: $navHeight;
+            a {
+                padding: 0;
+                margin: 0;
+                li {
+                    padding: 10px 32px;
+                    height: fit-content;
+                }
+            }
+        }
+        .hamburger {
+            display: block;
+        }
+        .nav-small-hide {
+            transform: translateX(100vw);
+        }
+    }
+}
+
+.jumbotron {
+    height: 100vh;
+    padding: 0;
+    .wrapper {
+        background: rgba($color: #5092dd, $alpha: 0.7);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        color: #fff;
+        padding: 20px;
+        h1 {
+            font-weight: bold;
+        }
+        p {
+            font-size: 18px;
+            max-width: 650px;
+        }
+    }
+    &#page {
+        height: 45vh;
+        min-height: 300px;
+        .wrapper {
+            padding: 50px 20px 5px;
+        }
+    }
+}
+
+/* Section Section */
+.line {
+    height: 3px;
+    background: $primaryColor;
+    margin-bottom: 25px;
+}
+.section-title {
+    font-size: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.card {
+    cursor: pointer;
+    .card-img {
+        overflow: hidden;
+        img {
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+.card-profile {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        object-fit: cover;
+    }
+    .nama {
+        text-align: center;
+    }
+    .jabatan {
+        text-align: center;
+    }
+}
+
+.card:hover {
+    img {
+        transform: scale(1.1);
+    }
+}
+
+footer {
+    background: $bgFooter;
+    padding: 20px;
+    color: rgb(58, 57, 57);
+    .text-big {
+        font-size: 30px;
+        color: $primaryColor;
+    }
+    .copyright {
+        text-align: center;
+    }
+}
