@@ -4,9 +4,9 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
-        content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 4 admin, bootstrap 4, css3 dashboard, bootstrap 4 dashboard, AdminWrap lite admin bootstrap 4 dashboard, frontend, responsive bootstrap 4 admin template, AdminWrap lite design, AdminWrap lite dashboard bootstrap 4 dashboard template">
+        content="Purwokinanti Admin">
     <meta name="description"
-        content="AdminWrap Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+        content="Halaman admin untuk Kelola web purwokinanti">
     <meta name="robots" content="noindex,nofollow">
 <title>{{$title ?? 'Purwokinanti admin dashboard'}}</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/adminwrap-lite/" />
