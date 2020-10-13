@@ -50,17 +50,19 @@ background-size: cover;
   <div class="section-title">Berita Terbaru</div>
   <div class="line" style="width: 130px"></div>
   <div class="row">
-  @foreach($berita as $b)
+    @foreach($berita as $b)
     <div class="col-md-4 mb-3">
-      <div class="card border-0">
-        <div class="card-img">
-          <img src="{{Storage::url('public/News')}}/{{$b->thumbnail}}" alt="{{$b->thumbnail}}" class="w-100" />
+      <a href="{{route('berita.single',['slug' => $b->slug])}}" class="text-decoration-none text-dark text-bold">
+        <div class="card border-0">
+          <div class="card-img">
+            <img src="{{Storage::url('public/News')}}/{{$b->thumbnail}}" alt="{{$b->thumbnail}}" class="w-100" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{$b->title}}</h5>
+            <p class="card-text">{{$b->created_at->diffForHumans()}}</p>
+          </div>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">{{$b->title}}</h5>
-          <p class="card-text">{{$b->created_at->diffForHumans()}}</p>
-        </div>
-      </div>
+      </a>
     </div>
   @endforeach
   </div>
@@ -73,13 +75,13 @@ background-size: cover;
     <div class="row">
       @foreach($agenda as $a)
       <div class="col-md-4 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{{$a->title}}</h5>
-          <p class="card-text">{{ $a->date->formatLocalized('%A, %d %B %Y')}}</p>
-          <a href="#" class="btn btn-sm btn-outline-primary">Detail</a>
-        </div>
-      </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{$a->title}}</h5>
+                <p class="card-text">{{ $a->date->formatLocalized('%A, %d %B %Y')}}</p>
+                <a href="{{route('agenda.single',['slug' => $a->slug])}}" class="btn btn-sm btn-outline-primary">Detail</a>
+              </div>
+            </div>
       </div>
       @endforeach
   </div>

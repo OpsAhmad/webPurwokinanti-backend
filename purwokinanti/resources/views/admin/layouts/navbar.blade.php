@@ -4,19 +4,13 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand p-lg-4" href="">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
-                    <img src="{{asset('vendor/admin-wrap')}}/images/logo-icon.png" alt="homepage" class="dark-logo" />
+                    <img src="{{asset('vendor/admin-wrap')}}/images/logo-icon.png" alt="homepage" class="dark-logo w-100" />
                     <!-- Light Logo icon -->
                 </b>
-                <!--End Logo icon -->
-                <!-- Logo text --><span class="text text-bold ml-3">
-                    <!-- dark Logo text -->
-                    Admin Panel
-                    <!-- Light Logo text -->
-                   </span>
             </a>
         </div>
         <!-- ============================================================== -->

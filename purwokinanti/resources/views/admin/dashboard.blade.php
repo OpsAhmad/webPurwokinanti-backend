@@ -21,7 +21,7 @@
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
-        <div class="row">
+            <div class="row">
             <!-- Column -->
             <div class="col-lg-12">
                 <div class="card" style="height: 320px;background: url({{Storage::url('/Dashboard/bridge.jpg')}});background-position:center;background-size:cover">
@@ -97,6 +97,7 @@
                     </div>
                 </div>
             </div>
+            <div class="mt-3"></div>
                 Keluarga Berencana
                 <div class="row">
                     <div class="col-lg-12 bg-white">
@@ -128,6 +129,7 @@
                         </div>
                 </div>
             </div>
+            <div class="mt-3"></div>
             Pasangan Usia Subur 
             <div class="row">
                 <div class="col-lg-12 bg-white">
@@ -153,6 +155,7 @@
                     </div>
             </div>
             </div>
+            <div class="mt-3"></div>
             KS BKB
             <div class="row">
                 <div class="col-lg-12 bg-white">
@@ -176,6 +179,9 @@
                             </tbody>
                         </table>
             </div>
+                </div>
+            </div>
+            <div class="mt-3"></div>
             KS BKR
             <div class="row">
                 <div class="col-lg-12 bg-white">
@@ -199,6 +205,9 @@
                             </tbody>
                         </table>
             </div>
+            </div>
+            </div>
+            <div class="mt-3"></div>
             KS BKL
             <div class="row">
                 <div class="col-lg-12 bg-white">
@@ -222,6 +231,9 @@
                             </tbody>
                         </table>
             </div>
+            </div>
+            </div>
+            <div class="mt-3"></div>
             KS UPPKS
             <div class="row">
                 <div class="col-lg-12 bg-white">
@@ -244,8 +256,9 @@
                                 </tr>
                             </tbody>
                         </table>
+                        </div>
+                        </div>
             </div>
-        </div>
     </div>
     <!-- ============================================================== -->
     <!-- End Container fluid  -->
