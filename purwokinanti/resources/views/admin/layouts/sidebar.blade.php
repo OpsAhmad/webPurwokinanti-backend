@@ -1,4 +1,4 @@
-<aside class="left-sidebar mt-lg-5 mt-0">
+<aside class="left-sidebar mt-lg-3 mt-0">
     <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
         <!-- Sidebar navigation-->

@@ -60,7 +60,7 @@
                                             <select name=pus id="" class="form-control @error('pus') is-invalid @enderror">
                                                 <option disabled selected>Pilih</option>
                                                 <option value="Tidak terdaftar" @if ($keluarga->pus == "Tidak terdaftar") selected @endif>Tidak terdaftar</option>
-                                                <option value="Tidak terdaftar" @if ($keluarga->pus == "PUS") selected @endif>PUS</option>
+                                                <option value="PUS" @if ($keluarga->pus == "PUS") selected @endif>PUS</option>
                                                 <option value="PUS Hamil" @if ($keluarga->pus == "PUS Hamil") selected @endif>PUS Hamil</option>
                                                 <option value="PUS IAS" @if ($keluarga->pus == "PUS IAS") selected @endif>PUS IAS</option>
                                                 <option value="PUS IAT" @if ($keluarga->pus == "PUS IAT") selected @endif>PUS IAT</option>

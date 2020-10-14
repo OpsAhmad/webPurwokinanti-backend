@@ -243,11 +243,11 @@ background-size: cover;
       <form action="">
       <select class="form-control mr-2" name="c" id="" style="max-width:250px" onchange="this.form.submit()">
         <option disabled selected>Kategori</option>
-        <option value="semua">semua</option>
-        <option value="PUS Hamil">PUS Hamil</option>
-        <option value="PUS IAS">PUS IAS</option>
-        <option value="PUS IAT">PUS IAT</option>
-        <option value="PUS TIAL">PUS TIAL</option>
+        <option value="semua" @if(request('c') == 'semua') selected @endif>semua</option>
+        <option value="PUS Hamil" @if(request('c') == 'PUS Hamil') selected @endif>PUS Hamil</option>
+        <option value="PUS IAS" @if(request('c') == 'PUS IAS') selected @endif>PUS IAS</option>
+        <option value="PUS IAT" @if(request('c') == 'PUS IAT') selected @endif>PUS IAT</option>
+        <option value="PUS TIAL" @if(request('c') == 'PUS TIAL') selected @endif>PUS TIAL</option>
       </select>
       </form>
     </div>

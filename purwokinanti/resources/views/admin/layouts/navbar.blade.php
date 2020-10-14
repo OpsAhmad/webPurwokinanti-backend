@@ -4,11 +4,11 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand p-lg-4" href="">
+            <a class="navbar-brand px-lg-4 text-center" href="">
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
-                    <img src="{{asset('vendor/admin-wrap')}}/images/logo-icon.png" alt="homepage" class="dark-logo w-100" />
+                    <img src="{{asset('vendor/admin-wrap')}}/images/logo-icon.png" alt="homepage" class="dark-logo w-75" />
                     <!-- Light Logo icon -->
                 </b>
             </a>
