@@ -132,6 +132,7 @@ class KependudukanController extends Controller
         $title = Page::where('location', 'general_title')->first();
         $favicon = Page::where('location', 'general_favicon')->first();
         $footer = Page::where('location', 'general_footer')->first();
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
         $jumbotron = Page::where('location', 'home_jumbotron')->first();
         if (request()->get('q')) {
@@ -141,6 +142,6 @@ class KependudukanController extends Controller
             $kependudukan =  Kependudukan::latest()->paginate(10);
         }
 
-        return view('public.page', compact('kependudukan', 'title', 'favicon', 'footer', 'jumbotron'));
+        return view('public.page', compact('kependudukan', 'title', 'favicon', 'footer', 'jumbotron', 'runingText'));
     }
 }

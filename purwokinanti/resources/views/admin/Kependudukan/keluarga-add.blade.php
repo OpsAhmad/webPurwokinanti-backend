@@ -138,6 +138,7 @@
                                             <select name=pus id="" class="form-control @error('pus') is-invalid @enderror">
                                                 <option disabled selected>Pilih</option>
                                                 <option value="Tidak terdaftar">Tidak terdaftar</option>
+                                                <option value="PUS">PUS</option>
                                                 <option value="PUS Hamil">PUS Hamil</option>
                                                 <option value="PUS IAS">PUS IAS</option>
                                                 <option value="PUS IAT">PUS IAT</option>

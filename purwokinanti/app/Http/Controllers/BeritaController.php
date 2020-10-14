@@ -133,8 +133,9 @@ class BeritaController extends Controller
 
         $jumbotron = Page::where('location', 'home_jumbotron')->first();
         $berita =  Berita::latest()->paginate(6);
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
-        return view('public.page', compact('berita', 'title', 'favicon', 'footer', 'jumbotron'));
+        return view('public.page', compact('berita', 'title', 'favicon', 'footer', 'jumbotron', 'runingText'));
     }
     /*
     * Get single() / Mengambil semuanya dari database

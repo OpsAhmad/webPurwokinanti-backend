@@ -24,6 +24,11 @@ background-size: cover;
 <!-- Contents -->
 <div class="container">
 <!-- Section tentang -->
+<div class="my-4">
+  <marquee behavior="scroll" >
+    {{$runingText->description}}
+  </marquee>
+</div>
 <div class="mt-5"></div>
 <div style="position: relative">
   <div

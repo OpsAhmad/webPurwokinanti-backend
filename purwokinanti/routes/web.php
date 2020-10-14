@@ -113,6 +113,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => '/admin/halaman/'], function
     Route::get('/title', [PageController::class, 'title'])->name('admin.halaman.title');
     Route::get('/favicon', [PageController::class, 'favicon'])->name('admin.halaman.favicon');
     Route::get('/footer', [PageController::class, 'footer'])->name('admin.halaman.footer');
+    Route::get('/runningtext', [PageController::class, 'running_text'])->name('admin.halaman.runningText');
 
     Route::get('beranda/jumbotron', [PageController::class, 'jumbotron'])->name('admin.halaman.beranda.jumbotron');
     Route::get('beranda/tentang', [PageController::class, 'tentang'])->name('admin.halaman.beranda.tentang');

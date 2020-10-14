@@ -1,4 +1,4 @@
-<aside class="left-sidebar mt-5">
+<aside class="left-sidebar mt-lg-5 mt-0">
     <!-- Sidebar scroll-->
     <div class="scroll-sidebar">
         <!-- Sidebar navigation-->
@@ -63,7 +63,7 @@
                 <li> <a class="waves-effect waves-dark" href="pages-blank.html" aria-expanded="false"><i
                             class="fa fa-pen"></i><span class="hide-menu">Edit halaman</span></a>
                             <ul>
-                                <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Beranda</span></a>
+                                   <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Umum</span></a>
                                     <ul>
                                         <li> <a class="waves-effect waves-dark" href="{{route('admin.halaman.title')}}" aria-expanded="false"><span class="hide-menu">Judul Halaman</span></a>
                                         </li>
@@ -71,17 +71,20 @@
                                         </li>
                                         <li> <a class="waves-effect waves-dark" href="{{route('admin.halaman.footer')}}" aria-expanded="false"><span class="hide-menu">Contact Web</span></a>
                                         </li>
-                                        <hr>
+                                        <li> <a class="waves-effect waves-dark" href="{{route('admin.halaman.runningText')}}" aria-expanded="false"><span class="hide-menu">Running Text</span></a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Beranda</span></a>
+                                    <ul>
                                         <li> <a class="waves-effect waves-dark" href="{{route('admin.halaman.beranda.jumbotron')}}" aria-expanded="false"><span class="hide-menu">Section Jumbotron</span></a>
                                         </li>
                                         <li> <a class="waves-effect waves-dark" href="{{route('admin.halaman.beranda.tentang')}}" aria-expanded="false"><span class="hide-menu">Section Tentang</span></a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><span class="hide-menu">Kependudukan</span></a>
-                                </li>
                             </ul>
-                </li>
+                        </li>
             </ul>
             <div class="mt-5"></div>
         </nav>

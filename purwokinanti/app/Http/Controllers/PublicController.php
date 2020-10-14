@@ -31,11 +31,12 @@ class PublicController extends Controller
         $about = Page::where('location', 'home_about')->first();
         $split = strlen($about->description) / 2;
         $about = str_split($about->description, $split);
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
         $berita = Berita::latest()->limit(3)->get();
         $agenda = Agenda::latest()->limit(3)->get();
         $kepengurusan = Kepengurusan::latest()->limit(3)->get();
 
-        return view('public.index', compact('berita', 'agenda', 'kepengurusan', 'jumbotron', 'about', 'title', 'favicon', 'footer'));
+        return view('public.index', compact('berita', 'agenda', 'kepengurusan', 'jumbotron', 'about', 'title', 'favicon', 'footer', 'runingText'));
     }
 }

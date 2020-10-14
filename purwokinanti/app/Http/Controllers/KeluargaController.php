@@ -142,6 +142,7 @@ class KeluargaController extends Controller
         $title = Page::where('location', 'general_title')->first();
         $favicon = Page::where('location', 'general_favicon')->first();
         $footer = Page::where('location', 'general_footer')->first();
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
         $jumbotron = Page::where('location', 'home_jumbotron')->first();
         if (request()->get('q')) {
@@ -151,28 +152,33 @@ class KeluargaController extends Controller
             $kb =  DB::table('kependudukans')->join('keluargas', 'kependudukans.id', '=', 'keluargas.kependudukan_id')->where('kb', '!=', 'Tidak terdaftar')->orderBy('keluargas.id', 'desc')->paginate(8);
         }
 
-        return view('public.page', compact('kb', 'title', 'favicon', 'footer', 'jumbotron'));
+        return view('public.page', compact('kb', 'title', 'favicon', 'footer', 'jumbotron', 'runingText'));
     }
     public function page_pus()
     {
         $title = Page::where('location', 'general_title')->first();
         $favicon = Page::where('location', 'general_favicon')->first();
         $footer = Page::where('location', 'general_footer')->first();
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
         $jumbotron = Page::where('location', 'home_jumbotron')->first();
         if (request()->get('q')) {
             $q = request()->get('q');
             $pus = DB::table('kependudukans')->join('keluargas', 'kependudukans.id', '=', 'keluargas.kependudukan_id')->where('kependudukans.name', 'like', '%' . $q . '%')->where('pus', '!=', 'Tidak terdaftar')->orderBy('keluargas.id', 'desc')->paginate(8);
+        } else if ((request()->get('c')) && (request()->get('c') != 'semua')) {
+            $c = request()->get('c');
+            $pus =  DB::table('kependudukans')->join('keluargas', 'kependudukans.id', '=', 'keluargas.kependudukan_id')->where('pus', $c)->orderBy('keluargas.id', 'desc')->paginate(8);
         } else {
             $pus =  DB::table('kependudukans')->join('keluargas', 'kependudukans.id', '=', 'keluargas.kependudukan_id')->where('pus', '!=', 'Tidak terdaftar')->orderBy('keluargas.id', 'desc')->paginate(8);
         }
-        return view('public.page', compact('pus', 'title', 'favicon', 'footer', 'jumbotron'));
+        return view('public.page', compact('pus', 'title', 'favicon', 'footer', 'jumbotron', 'runingText'));
     }
     public function page_ks()
     {
         $title = Page::where('location', 'general_title')->first();
         $favicon = Page::where('location', 'general_favicon')->first();
         $footer = Page::where('location', 'general_footer')->first();
+        $runingText = Page::where('location', 'general_runing_text')->first();
 
         $jumbotron = Page::where('location', 'home_jumbotron')->first();
         if (request()->get('q')) {
@@ -182,7 +188,7 @@ class KeluargaController extends Controller
             $ks =  DB::table('kependudukans')->join('keluargas', 'kependudukans.id', '=', 'keluargas.kependudukan_id')->where('ks', '!=', 'Tidak terdaftar')->orderBy('keluargas.id', 'desc')->paginate(8);
         }
 
-        return view('public.page', compact('ks', 'title', 'favicon', 'footer', 'jumbotron'));
+        return view('public.page', compact('ks', 'title', 'favicon', 'footer', 'jumbotron', 'runingText'));
     }
     /* 
     * Function page_detail -> detail keluarga-PUBLIC

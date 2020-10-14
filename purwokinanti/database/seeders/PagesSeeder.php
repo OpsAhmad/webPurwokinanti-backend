@@ -37,6 +37,10 @@ class PagesSeeder extends Seeder
                 'location' => 'general_footer'
             ],
             [
+                'description' => 'Selamat datang di kampung kb kepatihan',
+                'location' => 'general_runing_text'
+            ],
+            [
                 'image' => 'public/Pages/taman-sari.jpg',
                 'title' => 'Kelurahan Purwokinanti',
                 'description' => 'Selamat datang di portal informasi kelurahan purwokinanti, Mari kita bangun bersama!',

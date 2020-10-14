@@ -27,6 +27,10 @@ background-size: cover;
 
 <div class="container">
 
+  <marquee behavior="scroll" >
+    {{$runingText->description}}
+  </marquee>
+
 @isset($berita)
 <!-- SECTION BERITA START -->
 <div class="mt-5"></div>
@@ -87,14 +91,16 @@ background-size: cover;
 <!-- SECTION KEPENDUDUKAN START -->
 <div class="mt-5"></div>
 <div id="section-kependudukan">
-  <div class="d-flex justify-content-between align-items-center">
-    <div class="section-title">Kependudukan</div>
+  <div class="d-md-flex justify-content-between align-items-center mb-3">
+    <div>
+      <div class="section-title">Kependudukan</div>
+      <div class="line" style="width: 130px"></div>
+    </div>
     <form action="" class="form d-flex align-items-center">
         <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Nama Penduduk">
         <button type="submit" class="btn btn-sm btn-primary">Cari</button>
     </form>
-    </div>
-    <div class="line" style="width: 130px"></div>
+  </div>
     <div class="table-responsive">
       <table class="table table-light">
         <tbody>
@@ -132,14 +138,16 @@ background-size: cover;
 <!-- SECTION KB START -->
 <div class="mt-5"></div>
 <div id="section-kependudukan">
-  <div class="d-flex justify-content-between align-items-center">
-    <div class="section-title">Keluarga Berencana</div>
+  <div class="d-md-flex justify-content-between align-items-center mb-3">
+    <div>
+      <div class="section-title">Keluarga Berencana</div>
+      <div class="line" style="width: 130px"></div>
+    </div>
     <form action="" class="form d-flex align-items-center">
-        <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Nama Keluarga">
+        <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Keluarga">
         <button type="submit" class="btn btn-sm btn-primary">Cari</button>
     </form>
-    </div>
-    <div class="line" style="width: 130px"></div>
+  </div>
     <div class="table-responsive">
       <table class="table table-light">
         <tbody>
@@ -175,14 +183,16 @@ background-size: cover;
 <!-- SECTION KS START -->
 <div class="mt-5"></div>
 <div id="section-kependudukan">
-  <div class="d-flex justify-content-between align-items-center">
-    <div class="section-title">Keluarga Sejahtera</div>
+  <div class="d-md-flex justify-content-between align-items-center mb-3">
+    <div>
+      <div class="section-title">Keluarga Sejahtera</div>
+      <div class="line" style="width: 130px"></div>
+    </div>
     <form action="" class="form d-flex align-items-center">
-        <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Nama Keluarga">
+        <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Keluarga">
         <button type="submit" class="btn btn-sm btn-primary">Cari</button>
     </form>
-    </div>
-    <div class="line" style="width: 130px"></div>
+  </div>
     <div class="table-responsive">
       <table class="table table-light">
         <tbody>
@@ -218,14 +228,29 @@ background-size: cover;
 <!-- SECTION PUS START -->
 <div class="mt-5"></div>
 <div id="section-kependudukan">
-  <div class="d-flex justify-content-between align-items-center">
-    <div class="section-title">PUS</div>
-    <form action="" class="form d-flex align-items-center">
-        <input type="text" name="q" class="form-control mr-3 w-75" placeholder="Cari Nama Keluarga">
-        <button type="submit" class="btn btn-sm btn-primary">Cari</button>
-    </form>
+  <div class="d-md-flex justify-content-between align-items-center mb-1">
+    <div>
+      <div class="section-title">Pasangan usia subur</div>
+      <div class="line" style="width: 130px"></div>
     </div>
-    <div class="line" style="width: 170px"></div>
+  </div>
+  <div>
+    <div class="form-group d-md-flex justify-content-between align-items-center mb-3">
+      <form action="" class="form d-flex align-items-center mb-2">
+        <input type="text" name="q" class="form-control mr-2 w-100" placeholder="Cari Keluarga" style="max-width:250px">
+        <button type="submit" class="btn btn-sm btn-primary">Cari</button>
+      </form>
+      <form action="">
+      <select class="form-control mr-2" name="c" id="" style="max-width:250px" onchange="this.form.submit()">
+        <option disabled selected>Kategori</option>
+        <option value="semua">semua</option>
+        <option value="PUS Hamil">PUS Hamil</option>
+        <option value="PUS IAS">PUS IAS</option>
+        <option value="PUS IAT">PUS IAT</option>
+        <option value="PUS TIAL">PUS TIAL</option>
+      </select>
+      </form>
+    </div>
     <div class="table-responsive">
       <table class="table table-light">
         <tbody>
@@ -250,13 +275,14 @@ background-size: cover;
         @endforelse
       </table>
     </div>
-  <div class="d-flex justify-content-center mb-5 mt-3">
-    {{$pus->appends(request()->except('page'))->links('vendor.pagination.bootstrap-4')}}
   </div>
-</div>
+    <div class="d-flex justify-content-center mb-5 mt-3">
+      {{$pus->appends(request()->except('page'))->links('vendor.pagination.bootstrap-4')}}
+    </div>
 <!-- SECTION PUS END -->
 @endisset
 
+</div>
 </div>
 
 @endsection

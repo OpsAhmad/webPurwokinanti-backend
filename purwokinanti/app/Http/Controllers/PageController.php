@@ -104,4 +104,15 @@ class PageController extends Controller
 
         return $this->template($judul_halaman, $location);
     }
+    /*
+    * Function runningText > Menampilkan form edit untuk
+    */
+    public function running_text()
+    {
+        // * Mendefinisikan untuk breadcumb
+        $judul_halaman = 'Edit Running Text';
+        $location = 'general_runing_text';
+
+        return $this->template($judul_halaman, $location);
+    }
 }

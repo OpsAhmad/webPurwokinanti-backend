@@ -1,6 +1,6 @@
 <nav class="nav" id="navbar">
     <div class="container-nav">
-      <a href="/" class="menu-link"><div class="logo">Purwokinanti</div></a>
+    <a href="/" class="menu-link"><div class="logo"><img src="{{asset('vendor/admin-wrap')}}/images/logo-white.png" alt="" style="height: 50px"></div></a>
       <ul class="menu nav-small-hide" id="menu">
         <a href="{{route('berita')}}" class="menu-link @if(request()->is('berita')) active @endif"><li>Berita</li></a>
         <a href="{{route('agenda')}}" class="menu-link @if(request()->is('agenda')) active @endif"><li>Agenda</li></a>
